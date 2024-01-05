@@ -14,7 +14,13 @@
     <div class="page-header__container container">
       <div class="page-header__menu">
         <a class="page-header_logo logo" href="index.html" aria-current="page">
-          <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кэт энерджи.">
+          <picture>
+            <source width="70" height="59" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-desktop.svg">
+            <source width="60" height="50" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-desktop.svg">
+
+            <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кэт энерджи.">
+          </picture>
+          <img class="logo__image logo__image--text" src="images/logo-text.svg" alt="Кэт Энерджи">
         </a>
         <button class="page-header__toggle" aria-label="Открыть меню" type="button"></button>
         <nav class="page-header__nav nav">
@@ -166,7 +172,11 @@
       <div>
         <noscript>
           <a href="">
-            img
+            <picture>
+              <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/image-desktop@1x.jpg 1x, images/image-desktop@2x.jpg 2x">
+              <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+              <img src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта с местонахождением">
+            </picture>
           </a>
         </noscript>
 
@@ -188,31 +198,32 @@
         <li class="social__item">
           <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Вконтакте</span>
-            <img src="" width="28" height="22" alt="Логотип ВК.">
+            <img src="images/vk.svg" width="28" height="22" alt="Логотип ВК.">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademy">
             <span class="visually-hidden">Ютуб</span>
-            <img src="" width="28" height="22" alt="Логотип Ютуб.">
+            <img src="images/youtube.svg" width="28" height="22" alt="Логотип Ютуб.">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
-            <img src="" width="28" height="22" alt="Логотип Телеграм.">
+            <img src="images/telegram.svg" width="28" height="22" alt="Логотип Телеграм.">
           </a>
         </li>
 
       </ul>
       <a class="page-footer__copyright copyright" href="#">
         <span>HTML Academy</span>
-        <img class="copyright__logo-image" src="" width="27" height="34" alt="Логотип HTML Academy">
+        <img class="copyright__logo-image" src="images/html-logo.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
 
     </div>
 
   </footer>
+  <script src="scripts/index.js" defer></script>
 
 </body>
 
