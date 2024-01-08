@@ -1,0 +1,12 @@
+.nav {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $second-font;
+  color: $second-color;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  color: inherit;
+  text-decoration: none;
+}
