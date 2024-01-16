@@ -1,5 +1,14 @@
 .program-card {
+  position: relative;
+
+  padding: 30px 20px 18px;
+
   background-color: $second-bg;
+  background-repeat: no-repeat;
+
+  &--slim {
+    background-image: url("../../images/icons/st");
+  }
 }
 
 .program-card__title {

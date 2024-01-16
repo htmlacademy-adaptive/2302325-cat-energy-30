@@ -15,7 +15,7 @@
 </head>
 
 <body class="body nojs">
-  <header class="page-header">
+  <header class="page-header page-header--index">
     <div class="page-header__container container">
       <div class="page-header__menu">
         <a class="page-header_logo logo" href="index.html" aria-current="page">
@@ -25,12 +25,16 @@
 
             <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кэт энерджи.">
           </picture>
-          <svg class="logo__image logo__image--text" width="101" height="18" aria-hidden="true" focusable="false">
-            <use href="#"></use>
-          </svg>
+          <picture>
+            <source width="118" height="21" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-text.svg">
+            <source width="101" height="18" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-text.svg">
+
+            <img class="logo__image logo__image--text" src="images/logo-text.svg" width="101" height="18" alt="кэт энерджи.">
+          </picture>
+
         </a>
         <button class="page-header__toggle" aria-label="Открыть меню" type="button"></button>
-        <nav class="page-header__nav nav">
+        <nav class="page-header__nav nav nav--index">
           <ul class="nav__list list-reset">
             <li class="nav__item">
               <a class="nav__link nav__link--current" href="index.html" aria-current="page">Главная</a>
@@ -50,15 +54,17 @@
           <h1 class="hero__title page-title">Функциональное питание для котов</h1>
           <p class="hero__span">Занялся собой? Займись котом</p>
         </div>
-        <picture>
-          <source width="552" height="499" type="image/webp" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x">
-          <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x">
-          <source width="280" height="270" type="image/webp" srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x">
+        <div class="hero__image">
+          <picture>
+            <source width="552" height="499" type="image/webp" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.webp 1x, images/index-can-desktop@2x.webp 2x">
+            <source width="709" height="609" type="image/webp" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.webp 1x, images/index-can-tablet@2x.webp 2x">
+            <source width="280" height="270" type="image/webp" srcset="images/index-can-mobile@1x.webp 1x, images/index-can-mobile@2x.webp 2x">
 
-          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
-          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
-          <img class="hero__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Образец функционального корма для котов">
-        </picture>
+            <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
+            <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
+            <img src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Образец функционального корма для котов">
+          </picture>
+        </div>
         <a class="hero__button button" href="form.html">Подобрать программу</a>
       </section>
     </div>
