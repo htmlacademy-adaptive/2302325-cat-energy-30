@@ -4,9 +4,76 @@
   font-family: $second-font;
   color: $second-color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      color: $contrast-color;
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  border-top: 1px solid $nav-border-color;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: flex-end;
+
+    border-top: none;
+
+    gap: 13px;
+  }
+}
+
+.nav__item {
+  text-align: center;
+
+  border-bottom: 1px solid $nav-border-color;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .nav__link {
+  display: block;
+  margin: 0 20px;
+  padding: 22px 0 23px;
+
   color: inherit;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 10px 0;
+
+    &--current {
+      text-decoration: underline;
+
+      text-decoration-color: $base-bg;
+      text-decoration-style: solid;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 10px;
+    }
+  }
+}
+
+.nav--index .nav__link--current {
+  @media (min-width: $desktop-width) {
+    text-decoration-color: $contrast-color;
+  }
 }

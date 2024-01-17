@@ -1,0 +1,121 @@
+.description {
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 46px;
+
+    border-bottom: 1px solid $nav-border-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 69px;
+
+    border-bottom: none;
+  }
+}
+
+.description__title {
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.description__list {
+  display: grid;
+
+  counter-reset: section;
+
+  gap: 20px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    gap: 37px 208px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 37px 70px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.description__item {
+  position: relative;
+
+  display: grid;
+  min-height: 60px;
+
+  gap: 20px;
+  grid-template-columns: 60px 1fr;
+
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+    min-height: 280px;
+    padding: 40px 0;
+
+    gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-color: $base-bg;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px 60px;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
+  }
+
+  &::after {
+    content: counter(section) "";
+    position: absolute;
+    top: 0;
+    left: 110px;
+    z-index: -1;
+
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    font-family: $second-font;
+    color: $second-bg;
+
+    counter-increment: section;
+  }
+
+  &--natural {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-leaf");
+    }
+  }
+
+  &--water {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-water");
+    }
+  }
+
+  &--food {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-eat");
+    }
+  }
+
+  &--time {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-time");
+    }
+  }
+}
