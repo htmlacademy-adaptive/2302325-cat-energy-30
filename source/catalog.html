@@ -13,14 +13,20 @@
   <header class="page-header">
     <div class="page-header__container container">
       <div class="page-header__menu">
-        <a class="page-header_logo logo" href="index.html" aria-current="page">
+        <a class="page-header_logo logo logo--header" href="index.html" aria-current="page">
           <picture>
             <source width="70" height="59" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-desktop.svg">
             <source width="60" height="50" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-desktop.svg">
 
             <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кэт энерджи.">
           </picture>
-          <img class="logo__image logo__image--text" src="images/logo-text.svg" alt="Кэт Энерджи">
+          <picture>
+            <source width="118" height="21" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-text.svg">
+            <source width="101" height="18" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-text.svg">
+
+            <img class="logo__image logo__image--text" src="images/logo-text.svg" width="101" height="18" alt="кэт энерджи.">
+          </picture>
+
         </a>
         <button class="page-header__toggle" aria-label="Открыть меню" type="button"></button>
         <nav class="page-header__nav nav">
@@ -358,19 +364,19 @@
       </div>
     </section>
 
-    <section class="contacts contacts--index">
+    <section class="contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="contacts__container container">
-        <div class="contacts__wrapper">
+        <div class="contacts__content">
           <span class="contacts__title">Приглашаем<br>к сотрудничеству дилеров!</span>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-span">Санкт-Петербург</span>
           </address>
         </div>
       </div>
 
-      <div>
+      <div class="contacts__map">
         <noscript>
-          <a href="">
+          <a class="contacts__map-link" href="#">
             <picture>
               <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/image-desktop@1x.jpg 1x, images/image-desktop@2x.jpg 2x">
               <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
@@ -379,8 +385,8 @@
           </a>
         </noscript>
 
-        <div>
-          <iframe src="" frameborder="0"></iframe>
+        <div class="contacts__iframe">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abcc1360a71fbd05ba2eb451d7d21c4f8b199b2095defd389837428c1dfe30c08&amp;source=constructor" frameborder="0"></iframe>
         </div>
       </div>
 
@@ -390,8 +396,14 @@
 
   <footer class="page-footer">
     <div class="page-footer__container container">
-      <a class="page-footer__logo logo" href="index.html">
-        <img class="page-footer__logo-image" src="images/footer-logo.svg" width="128" height="24" alt="Логотип Кэт Энерджи">
+      <a class="page-footer__logo logo logo--footer" href="index.html">
+        <picture>
+          <source width="118" height="21" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-text.svg">
+          <source width="101" height="18" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-text.svg">
+
+          <img class="logo__image logo__image--text" src="images/logo-text.svg" width="101" height="18" alt="кэт энерджи.">
+        </picture>
+
       </a>
       <ul class="page-footer__social social list-reset">
         <li class="social__item">

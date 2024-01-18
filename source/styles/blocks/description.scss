@@ -93,6 +93,10 @@
     color: $second-bg;
 
     counter-increment: section;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &--natural {

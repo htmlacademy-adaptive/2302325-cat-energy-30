@@ -1,0 +1,37 @@
+.page-footer {
+  padding: 40px 0;
+
+  background-color: $extra-bg;
+}
+
+.page-footer__logo {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__social {
+  margin: 0 auto;
+  padding: 20px 0 19px;
+
+  border-top: 1px solid $footer-border-color;
+  border-bottom: 1px solid $footer-border-color;
+
+  gap: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 40px;
+
+    border: none;
+  }
+}
+
+.page-footer__copyright {
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+}

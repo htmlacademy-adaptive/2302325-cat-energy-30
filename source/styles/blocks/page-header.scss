@@ -51,15 +51,10 @@
 }
 
 .page-header__logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(50% + 30px);
   margin-bottom: 14px;
   margin-left: 20px;
 
   @media (min-width: $tablet-width) {
-    width: 174px;
     margin: 0;
   }
 }

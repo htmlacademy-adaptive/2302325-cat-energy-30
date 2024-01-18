@@ -18,7 +18,7 @@
   <header class="page-header page-header--index">
     <div class="page-header__container container">
       <div class="page-header__menu">
-        <a class="page-header_logo logo" href="index.html" aria-current="page">
+        <a class="page-header_logo logo logo--header" href="index.html" aria-current="page">
           <picture>
             <source width="70" height="59" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-desktop.svg">
             <source width="60" height="50" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-desktop.svg">
@@ -125,29 +125,35 @@
           </div>
 
         </div>
-        <div class="example__sliser slider">
-          <div class="slider__image slider__image--before">
-            <picture>
-              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.webp 1x, images/cat-before-tablet@2x.webp 2x">
-              <source width="280" height="270" type="image/webp" srcset="cat-before-mobile@1x.webp 1x, images/cat-before-mobile@2x.webp 2x">
+        <div class="example__slider slider">
+          <div class="slider__container">
+            <div class="slider__image slider__image--before">
+              <picture>
+                <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.webp 1x, images/cat-before-tablet@2x.webp 2x">
+                <source width="280" height="270" type="image/webp" srcset="cat-before-mobile@1x.webp 1x, images/cat-before-mobile@2x.webp 2x">
 
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
-              <img src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
-            </picture>
+                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x">
+                <img src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
+              </picture>
 
+            </div>
+            <div class="slider__image slider__image--after">
+              <picture>
+                <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.webp 1x, images/cat-after-tablet@2x.webp 2x">
+                <source width="280" height="270" type="image/webp" srcset="cat-after-mobile@1x.webp 1x, images/cat-after-mobile@2x.webp 2x">
+
+                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
+                <img src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот">
+              </picture>
+            </div>
+            <button class="slider__control" type="button" aria-label="Ползунок наглядного изменения состояния кота при разном питании">
+              <span>
+                <svg width="40" height="40" aria-hidden="true" focusable="false">
+                  <use href="images/icons/stack.svg#control"></use>
+                </svg>
+              </span>
+            </button>
           </div>
-          <div class="slider__image slider__image--after">
-            <picture>
-              <source width="560" height="512" type="image/webp" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.webp 1x, images/cat-after-tablet@2x.webp 2x">
-              <source width="280" height="270" type="image/webp" srcset="cat-after-mobile@1x.webp 1x, images/cat-after-mobile@2x.webp 2x">
-
-              <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x">
-              <img src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот">
-            </picture>
-          </div>
-          <button class="slider__control" type="button">
-            <span class="visually-hidden">Изменение состояния кота при разном питании</span>
-          </button>
         </div>
       </div>
     </section>
@@ -155,16 +161,16 @@
     <section class="contacts contacts--index">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="contacts__container container">
-        <div class="contacts__wrapper">
+        <div class="contacts__content">
           <span class="contacts__title">Приглашаем<br>к сотрудничеству дилеров!</span>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-span">Санкт-Петербург</span>
           </address>
         </div>
       </div>
 
-      <div>
+      <div class="contacts__map">
         <noscript>
-          <a href="">
+          <a class="contacts__map-link" href="#">
             <picture>
               <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/image-desktop@1x.jpg 1x, images/image-desktop@2x.jpg 2x">
               <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
@@ -173,8 +179,8 @@
           </a>
         </noscript>
 
-        <div>
-          <iframe src="" frameborder="0"></iframe>
+        <div class="contacts__iframe">
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abcc1360a71fbd05ba2eb451d7d21c4f8b199b2095defd389837428c1dfe30c08&amp;source=constructor" frameborder="0"></iframe>
         </div>
       </div>
 
@@ -184,35 +190,38 @@
 
   <footer class="footer page-footer">
     <div class="page-footer__container container">
-      <a class="page-footer__logo logo" href="index.html" aria-current="page">
-        <img class="page-footer__logo-image" src="images/footer-logo.svg" width="128" height="24" alt="Логотип Кэт Энерджи">
+      <a class="page-footer__logo logo logo--footer" href="index.html" aria-current="page">
+        <picture>
+          <source width="118" height="21" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-text.svg">
+          <source width="101" height="18" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-text.svg">
+
+          <img class="logo__image logo__image--text" src="images/logo-text.svg" width="101" height="18" alt="кэт энерджи.">
+        </picture>
+
       </a>
       <ul class="page-footer__social social list-reset">
         <li class="social__item">
           <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Вконтакте</span>
-
-            <img src="images/vk.svg" width="28" height="22" alt="Логотип ВК.">
-
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademy">
             <span class="visually-hidden">Ютуб</span>
-            <img src="images/youtube.svg" width="28" height="22" alt="Логотип Ютуб.">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
-            <img src="images/telegram.svg" width="28" height="22" alt="Логотип Телеграм.">
           </a>
         </li>
 
       </ul>
       <a class="page-footer__copyright copyright" href="#">
-        <span>HTML Academy</span>
-        <img class="copyright__logo-image" src="images/html-logo.svg" width="27" height="34" alt="Логотип HTML Academy">
+        <span class="copyright__text">HTML Academy</span>
+        <svg class="copyright__logo" width="27" height="34" aria-hidden="true" focusable="false">
+          <use href="images/icons/stack.svg#logo-academy"></use>
+        </svg>
       </a>
 
     </div>

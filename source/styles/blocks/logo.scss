@@ -1,6 +1,81 @@
 .logo {
-  color: blue;
+  color: #111111;
   text-decoration: none;
 
+  --color-cat-text: #111111;
   fill: currentColor;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(50% + 30px);
+
+    @media (min-width: $tablet-width) {
+      width: 174px;
+
+      color: #444444;
+    }
+
+    &:hover,
+    &:focus {
+      color: #444444;
+
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &--footer {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+      color: #3e3e3e;
+
+      --color-cat-text: #3e3e3e;
+    }
+
+    &:active {
+      color: #6b6b6b;
+
+      --color-cat-text: #6b6b6b;
+    }
+  }
+}
+
+.logo--header img {
+  display: block;
+  width: 33px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 59px;
+  }
+}
+
+.logo--header svg {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
+}
+
+.logo--footer svg {
+  width: 128px;
+  height: 24px;
 }
