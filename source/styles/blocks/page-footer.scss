@@ -4,11 +4,19 @@
   background-color: $extra-bg;
 }
 
+.page-footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
 .page-footer__logo {
   margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
