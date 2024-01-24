@@ -25,12 +25,10 @@
 
             <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кэт энерджи.">
           </picture>
-          <picture>
-            <source width="118" height="21" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-text.svg">
-            <source width="101" height="18" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-text.svg">
 
-            <img class="logo__image logo__image--text" src="images/logo-text.svg" width="101" height="18" alt="кэт энерджи.">
-          </picture>
+          <svg class="logo__image logo__image--text" aria-hidden="true" focusable="false" width="101" height="18" alt="кэт энерджи.">
+            <use href="images/icons/stack.svg#logo-text"></use>
+          </svg>
 
         </a>
         <button class="page-header__toggle" aria-label="Открыть меню" type="button"></button>
@@ -191,12 +189,9 @@
   <footer class="footer page-footer">
     <div class="page-footer__container container">
       <a class="page-footer__logo logo logo--footer" href="index.html" aria-current="page">
-        <picture>
-          <source width="118" height="21" media="(min-width:min-width: 1440px)" type="image/svg+xml" srcset="images/logo-text.svg">
-          <source width="101" height="18" media="(min-width:min-width: 768px)" type="image/svg+xml" srcset="images/logo-text.svg">
-
-          <img class="logo__image logo__image--text" src="images/logo-text.svg" width="101" height="18" alt="кэт энерджи.">
-        </picture>
+        <svg class="logo__image logo__image--text" aria-hidden="true" focusable="false" width="101" height="18" alt="кэт энерджи.">
+          <use href="images/icons/stack.svg#logo-text"></use>
+        </svg>
 
       </a>
       <ul class="page-footer__social social list-reset">

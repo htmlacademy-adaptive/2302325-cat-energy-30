@@ -5,15 +5,56 @@
   text-transform: uppercase;
 }
 
+.form form {
+  overflow: hidden;
+}
+
 .form__fieldset {
+  position: relative;
+
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440;
+  margin: 0 auto;
+
   border: none;
+
+  &--lines {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -19px;
+      left: 50%;
+      z-index: -1;
+
+      width: 100vw;
+      height: 4px;
+
+      background-color: $base-bg;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .form__legend {
+  position: relative;
+  top: -4;
+
+  padding: 0 20px;
+
   font-size: 24px;
   line-height: 26px;
   color: $second-color;
   text-transform: none;
+
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 40px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__note {

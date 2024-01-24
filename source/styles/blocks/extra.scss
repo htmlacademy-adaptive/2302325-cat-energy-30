@@ -106,7 +106,7 @@
   text-align: center;
   color: $contrast-color;
 
-  background-image: url("../../images/icons/stack.svg#icon-gift"),
+  background: url("../../images/icons/stack.svg#icon-gift"),
     linear-gradient(rgba($base-bg, 85%), rgba($base-bg, 85%)),
     image-set(
       url("../../images/extra-bg-mobile@2x.webp") type("image/webp") 2x,
@@ -125,7 +125,7 @@
 
     text-align: start;
 
-    background-image: url("../../images/icons/stack.svg#icon-gift"),
+    background: url("../../images/icons/stack.svg#icon-gift"),
       linear-gradient(rgba($base-bg, 85%), rgba($base-bg, 85%)),
       image-set(
         url("../../images/extra-bg-tablet@2x.webp") type("image/webp") 2x,
@@ -145,7 +145,7 @@
 
     text-align: center;
 
-    background-image: url("../../images/icons/stack.svg#icon-gift"),
+    background: url("../../images/icons/stack.svg#icon-gift"),
       linear-gradient(rgba($base-bg, 85%), rgba($base-bg, 85%)),
       image-set(
         url("../../images/extra-bg-mobile@2x.webp") type("image/webp") 2x,
