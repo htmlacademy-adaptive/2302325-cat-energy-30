@@ -20,6 +20,12 @@
       color: $contrast-color;
     }
   }
+
+  &--closed {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
 }
 
 .nav__list {

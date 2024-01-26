@@ -17,17 +17,11 @@
           rgba(104, 183, 56, 0.85),
           rgba(104, 183, 56, 0.85)
         ),
-        url(../../images/index-background-desktop@2x.jpg);
+        url("../../images/index-background-desktop@2x.jpg");
       background-repeat: no-repeat;
       background-position: left;
       background-size: cover;
     }
-  }
-}
-
-.page-header__container {
-  @media (max-width: $mobile-width) {
-    padding: 0;
   }
 }
 
@@ -37,7 +31,8 @@
 
   display: grid;
   align-items: start;
-  padding: 13px 0 0;
+  height: 65px;
+  padding: 13px 20px 14px;
 
   grid-template-columns: 1fr;
 
@@ -78,14 +73,52 @@
   }
 }
 
-.page-header__menu.is-open .page-header__nav {
+.page-header__menu.is-open.page-header__nav {
   display: block;
 }
 
 .page-header__toggle {
-  position: absolute;
-  top: 13px;
-  right: 14px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 21px;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: $second-color;
+    box-shadow: 0 6px 0 0 $second-color, 0 12px 0 0 $second-color;
+  }
+
+  &:active::before {
+    background-color: fade($second-color, 30%);
+    box-shadow: 0 6px 0 0 fade($second-color, 30%),
+      0 12px 0 0 fade($second-color, 30%);
+  }
+
+  &--opened {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      right: 21px;
+
+      width: 24px;
+      height: 2px;
+
+      background-color: $second-color;
+    }
+
+    &::before {
+      transform: rotate (45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: none;

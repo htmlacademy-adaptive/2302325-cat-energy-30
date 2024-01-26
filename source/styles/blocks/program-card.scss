@@ -51,6 +51,7 @@
 
 .program-card__title {
   margin: 0;
+  margin-bottom: 29px;
   padding-left: 70px;
 
   font-weight: 400;
@@ -73,11 +74,17 @@
   }
 }
 
+.program-card__description {
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid $footer-border-color;
+}
+
 .program-card__link {
   position: relative;
 
   display: inline-block;
-  padding-right: 50px;
+  padding: 5px 50px 5px 0;
 
   font-size: 16px;
   line-height: 16px;
@@ -89,18 +96,20 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 7px;
     right: 0;
 
     display: block;
-    width: 32px;
-    height: 100%;
+    width: 37px;
+    height: 12px;
 
     background-image: url("../../images/icons/stack.svg#arrow");
     background-repeat: no-repeat;
     background-position: -8px center;
 
     transition: background-position-x 0.3s ease-in-out;
+
+    object-fit: cover;
   }
 
   &:hover::after {
