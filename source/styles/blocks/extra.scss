@@ -133,6 +133,7 @@
         url("../../images/extra-bg-tablet@2x.jpg") 2x,
         url("../../images/extra-bg-tablet@1x.jpg") 1x
       );
+    background-repeat: no-repeat;
     background-position: top 57px left 77px, center, center;
     background-size: 80px 82px, auto, cover;
   }
@@ -153,7 +154,8 @@
         url("../../images/extra-bg-mobile@2x.jpg") 2x,
         url("../../images/extra-bg-mobile@1x.jpg") 1x
       );
-    background-position: top 56px, center, center, right;
+    background-repeat: no-repeat;
+    background-position: top 56px center, center, right;
     background-size: 78px 80px, auto, cover;
   }
 }

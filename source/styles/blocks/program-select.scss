@@ -1,4 +1,16 @@
+.program-select {
+  min-width: 320px;
+}
+
+.program-select__title {
+  margin-bottom: 37px;
+
+  line-height: 36px;
+}
+
 .program-select__description {
+  margin-bottom: 39px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: $second-font;

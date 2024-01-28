@@ -20,13 +20,8 @@
   grid-template-columns: 1fr;
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.example__wrapper {
-  @media (min-width: $desktop-width) {
-    max-width: 433px;
+    gap: 10px 220px;
+    grid-template-columns: 436px 1fr;
   }
 }
 

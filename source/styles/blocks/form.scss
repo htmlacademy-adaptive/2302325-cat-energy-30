@@ -9,6 +9,12 @@
   overflow: hidden;
 }
 
+.form__group-item {
+  display: grid;
+
+  grid-template-columns: auto 1fr;
+}
+
 .form__fieldset {
   position: relative;
 

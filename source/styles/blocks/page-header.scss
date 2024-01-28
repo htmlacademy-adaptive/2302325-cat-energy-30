@@ -36,6 +36,10 @@
 
   grid-template-columns: 1fr;
 
+  @media (max-width: $mobile-width) {
+    border-bottom: 1px solid $footer-border-color;
+  }
+
   @media (min-width: $tablet-width) {
     grid-template-columns: 174px 1fr;
   }
@@ -78,6 +82,9 @@
 }
 
 .page-header__toggle {
+  background-color: transparent;
+  border: none;
+
   &::before {
     content: "";
     position: absolute;
