@@ -1,18 +1,20 @@
 .logo {
-  color: #111111;
-  text-decoration: none;
+  width: fit-content;
 
-  --color-cat-text: #111111;
+  color: #111111;
+
   fill: currentColor;
 
+  --color-logo-text: #111111;
+
   &--header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 56px;
     align-items: center;
-    width: calc(50% + 30px);
 
     @media (min-width: $tablet-width) {
-      width: 174px;
+      column-gap: 13px;
 
       color: #444444;
     }
@@ -31,20 +33,21 @@
 
   &--footer {
     display: block;
-    width: fit-content;
+    width: 128px;
+    height: 24px;
     margin: 0 auto;
 
     &:hover,
     &:focus {
       color: #3e3e3e;
 
-      --color-cat-text: #3e3e3e;
+      --color-logo-text: #3e3e3e;
     }
 
     &:active {
       color: #6b6b6b;
 
-      --color-cat-text: #6b6b6b;
+      --color-logo-text: #6b6b6b;
     }
   }
 }
@@ -76,6 +79,7 @@
 }
 
 .logo--footer svg {
-  width: 128px;
-  height: 24px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }

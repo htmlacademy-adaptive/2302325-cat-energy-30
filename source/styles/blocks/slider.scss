@@ -1,12 +1,12 @@
 .slider {
   position: relative;
 
+  overflow: hidden;
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
-  overflow: hidden;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     max-width: 560px;
   }
 }
@@ -14,12 +14,12 @@
 .slider__container {
   position: relative;
 
-  height: 256px;
   overflow: hidden;
+  height: 256px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     height: 512px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
 }
 
@@ -27,18 +27,18 @@
   position: absolute;
   top: 0;
 
+  overflow: hidden;
   width: 50%;
   height: 100%;
-  overflow: hidden;
 
   &--before {
-    left: 0;
     z-index: 2;
+    left: 0;
   }
 
   &--after {
-    right: 0;
     z-index: 1;
+    right: 0;
   }
 }
 
@@ -60,10 +60,11 @@
 
 .slider__control {
   position: absolute;
+  z-index: 3;
   top: 0;
   bottom: 0;
   left: 50%;
-  z-index: 3;
+  transform: translateX(-50%);
 
   width: 4px;
   padding: 0;
@@ -73,7 +74,7 @@
   background-color: currentColor;
   border: none;
   border-radius: 2px;
-  transform: translateX(-50%);
+
   cursor: pointer;
 
   &:hover,
@@ -82,21 +83,20 @@
   }
 
   &:active {
-    color: $extra-bg;
-
-    opacity: 0.6;
+    color: $basic-green-2;
   }
 }
 
 .slider__control span {
   position: absolute;
+  z-index: 4;
   top: 50%;
   left: 50%;
-  z-index: 4;
+  transform: translate(-50%, -50%);
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
 
@@ -105,7 +105,6 @@
   background-color: #ffffff;
   border: 2px solid currentColor;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
 
   fill: currentColor;
 }

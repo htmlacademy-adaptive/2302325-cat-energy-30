@@ -1,8 +1,15 @@
 .page-title {
   margin: 0;
 
+  font-family: $second-font;
   font-size: 36px;
   line-height: 40px;
-  font-family: $second-font;
   color: $second-color;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 10px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

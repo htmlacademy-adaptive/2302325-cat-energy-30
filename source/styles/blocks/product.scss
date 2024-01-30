@@ -1,50 +1,56 @@
-.product {
+.product__container {
   display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px 0;
+  align-items: start;
+  padding: 20px 20px 25px;
 
   font-size: 12px;
   line-height: 16px;
 
-  grid-template-columns: 140px 1fr;
-
   @media (min-width: $tablet-width) {
-    padding-top: 100px;
-
     grid-template-columns: 1fr;
-  }
+    gap: 22px 0;
+    padding: 40px 38px 40px;
 
-  &--more {
-    text-align: center;
-
-    grid-template-columns: 1fr;
-
-    @media (min-width: $tablet-width) {
-      background-color: transparent;
-      border: 1px solid $second-bg;
-    }
-  }
-}
-
-.product__container {
-  @media (min-width: $tablet-width) {
     background-color: $second-bg;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 11px 0;
+  }
 }
 
-.product__container img {
+.product__link {
   display: block;
   width: 140px;
   height: 107px;
 
   @media (min-width: $tablet-width) {
-    margin: -111px auto 0;
     width: 200px;
     height: 210px;
+    margin: -111px auto 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 169px;
     height: 210px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__link img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .product__content {
@@ -53,53 +59,157 @@
 }
 
 .product__link-content {
-  display: block;
-  width: 80px;
-
+  color: #222222;
   text-decoration: none;
 
-  @media (min-width: $tablet-width) {
-    align-self: center;
-    width: 135px;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-    text-align: center;
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .product__title {
+  max-width: 80px;
   margin: 0;
 
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
   font-family: $second-font;
-  color: $second-color;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    max-width: 127px;
-    margin: 0 auto 20px;
+    max-width: 155px;
+    margin: 0 auto;
 
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
+  }
+}
+
+.product__features {
+  margin: 0;
+  padding: 15px 0 8px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width:$tablet-width) {
+    padding: 13px 0 10px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width:$desktop-width) {
+    padding: 18px 0 23px;
   }
 }
 
 .product__features-item {
   display: flex;
+  gap: 10px;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 7px 0 4px;
+
+    border-bottom: 1px solid $extra-border;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+  }
 }
 
-.product__features-field {
-  display: inline;
+.product__features dd {
+  margin: 0;
 }
 
-.product__features-value {
-  display: inline;
+.product__info {
+  margin: 0 0 20px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 170px;
+    margin: 0 auto 80px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 92px;
+  }
 }
 
 .product__button {
-  align-self: end;
-
   grid-column: 1/-1;
+  width: 100%;
+}
+
+.product--more .product__container {
+  position: relative;
+
+  display: block;
+  padding: 77px 20px 15px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 160px 35px 30px;
+
+    background-color: transparent;
+    border: 2px solid $second-bg;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 148px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 2px;
+
+    background-color: #d3d3d3;
+
+    @media (min-width: $tablet-width) {
+      top: 80px;
+
+      width: 60px;
+    }
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(90deg);
+  }
+}
+
+.product--more .product__title {
+  max-width: none;
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 175px;
+    margin-bottom: 23px;
+  }
+}
+
+.product--more .product__button {
+  max-width: none;
+  margin-bottom: 9px;
 }

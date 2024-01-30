@@ -1,0 +1,123 @@
+.control {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+
+  &--radio {
+    @media (min-width: $tablet-width) {
+      padding: 24px 28px;
+
+      border: 1px solid #e7e7e7;
+    }
+  }
+
+  &--check {
+    @media (min-width: $tablet-width) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 33px 57px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 33px 78px;
+    }
+  }
+}
+
+.control__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  min-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
+}
+
+.control__label {
+  padding-left: 15px;
+
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.control__input {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin: 0;
+
+  appearance: none;
+  border: 1px solid $extra-border;
+
+  &:hover,
+  &:focus {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+
+    & + .control__label {
+      opacity: 0.3;
+
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.control__input--radio {
+  border-radius: 50%;
+
+  &:checked::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 13px;
+    height: 13px;
+
+    background-color: $base-bg;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.control__input--check:checked {
+  background-image: url("../../images/icons/stack.svg#icon-check");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 14px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 24px 19px;
+  }
+}
