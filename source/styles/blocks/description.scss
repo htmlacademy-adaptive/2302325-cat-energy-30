@@ -22,19 +22,20 @@
 
 .description__list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
 
   counter-reset: section;
 
+  gap: 20px;
+  grid-template-columns: 1fr;
+
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 1fr);
     gap: 77px 60px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
     gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -59,8 +60,8 @@
   }
 
   &::before {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 2px;
     left: 0;
 
@@ -81,17 +82,17 @@
   }
 
   &::after {
-    position: absolute;
     content: counter(section);
-    z-index: -1;
+    position: absolute;
     top: 0;
     left: 116px;
+    z-index: -1;
 
     margin: 0;
 
-    font-family: $second-font;
     font-size: 280px;
     line-height: 230px;
+    font-family: $second-font;
     color: $second-bg;
 
     counter-increment: section;
