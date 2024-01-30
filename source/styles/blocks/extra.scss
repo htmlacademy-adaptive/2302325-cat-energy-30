@@ -1,27 +1,224 @@
+.extra {
+  padding: 26px 0 35px;
+
+  @media (min-width: $tablet-width) {
+    padding: 70px 0 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 78px 0 18px;
+  }
+}
+
+.extra__catalog-container {
+  padding-top: 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px 80px;
+    align-items: start;
+    padding-top: 68px;
+  }
+}
+
+.extra__main-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+
+  font-family: $second-font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $second-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--lines {
+    position: relative;
+
+    overflow: hidden;
+    margin: 0 -20px;
+    padding-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 -30px;
+      padding-left: 30px;
+    }
+
+    @media (min-width: 1440px) {
+      margin: 0 -102px;
+      padding-left: 61px;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      top: 15px;
+
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      margin-right: -100%;
+
+      vertical-align: middle;
+
+      background-color: $base-bg;
+
+      @media (min-width: $tablet-width) {
+        top: 22px;
+      }
+    }
+
+    &::before {
+      display: none;
+      margin-right: auto;
+      margin-left: -100%;
+
+      @media (min-width: $tablet-width) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &--lines span {
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 40px;
+    }
+  }
+}
+
+.extra__list {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+}
+
 .extra__item {
-  font-size: 14px;
-  line-height: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 14px;
+  justify-content: space-between;
+  padding: 13px 0 18px;
+
+  border-top: 1px solid $extra-border;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 150px 70px;
+    gap: 18px 20px;
+    padding: 26px 37px 28px;
+
+    border: 1px solid $extra-border;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 220px 60px 244px;
+    gap: 18px 23px;
+    align-items: baseline;
+    padding: 17px 0 14px;
+
+    border: none;
+    border-top: 1px solid $extra-border;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $extra-border;
+  }
 }
 
 .extra__title {
-  font-size: 24px;
-  line-height: 24px;
-  font-family: $second-font;
-}
+  grid-column: 1 / -1;
+  margin: 0;
 
-.extra__item-title {
+  font-family: $second-font;
   font-size: 16px;
+  font-weight: 400;
   line-height: 16px;
-  font-family: $second-font;
+  color: #222222;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    grid-column: auto;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
-.extra__promo {
+.extra__item span {
+  font-size: 14px;
+  line-height: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 4px;
+
+    font-size: 16px;
+    line-height: 26px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.extra__btn {
+  grid-column: 1/-1;
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+  }
+}
+
+.extra__bonus {
+  margin: 0;
+  padding: 172px 20px 26px;
+
   font-size: 16px;
   line-height: 20px;
+  color: $contrast-color;
+  text-align: center;
 
-  background-image: linear-gradient(rgba($base-bg, 85%), rgba($base-bg, 85%)),
-    url("../../images/");
+  background-image: url("../../images/icons/stack.svg#icon-gift"),
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/extra-bg-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center, cover;
+  background-position: top 59px center, top, top;
+  background-size: 78px 80px, auto, cover;
+
+  @media (min-width: $tablet-width) {
+    padding: 56px 20px 52px 60%;
+
+    text-align: left;
+
+    background-image: url("../../images/icons/stack.svg#icon-gift"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/extra-bg-tablet@1x.jpg");
+    background-position: center left 80px, top, center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    padding: 172px 20px 26px;
+
+    text-align: center;
+
+    background-image: url("../../images/icons/stack.svg#icon-gift"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/extra-bg-mobile@1x.jpg");
+    background-position: top 59px center, top, right;
+  }
 }

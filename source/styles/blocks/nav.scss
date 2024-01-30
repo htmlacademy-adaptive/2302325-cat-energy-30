@@ -1,7 +1,7 @@
 .nav {
+  font-family: $second-font;
   font-size: 20px;
   line-height: 20px;
-  font-family: $second-font;
   color: $second-color;
   text-transform: uppercase;
 
@@ -20,6 +20,12 @@
       color: $contrast-color;
     }
   }
+
+  &--closed {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
 }
 
 .nav__list {
@@ -31,11 +37,10 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
+    gap: 10px 34px;
     justify-content: flex-end;
 
     border-top: none;
-
-    gap: 13px;
   }
 }
 
@@ -59,16 +64,25 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 10px 0;
+    padding: 14px 0 10px;
 
     &--current {
       text-decoration: underline;
-
       text-decoration-color: $base-bg;
       text-decoration-style: solid;
       text-decoration-thickness: 2px;
-      text-underline-offset: 10px;
+      text-underline-offset: 12px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

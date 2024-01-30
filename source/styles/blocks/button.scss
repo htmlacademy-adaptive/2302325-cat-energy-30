@@ -2,19 +2,59 @@
   display: inline-block;
   padding: 10px;
 
-  font-size: 16px;
-  line-height: 20px;
   font-family: $second-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
   color: $contrast-color;
-  text-transform: uppercase;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 
   background-color: $base-bg;
   border: none;
+
+  transition: background-color $trans-default;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+
+    background-color: $basic-green-2;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+
+    pointer-events: none;
+  }
 }
 
 .button--second {
-  color: $second-color;
+  color: $base-color;
 
   background-color: $second-bg;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+
+    background-color: $catalog-border;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+
+    pointer-events: none;
+  }
 }

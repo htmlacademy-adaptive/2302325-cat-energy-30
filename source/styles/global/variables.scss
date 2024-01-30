@@ -1,15 +1,22 @@
 $base-color: #444444;
 $second-color: #000000;
+$second-color-light: #111111;
 $contrast-color: #ffffff;
 $nav-border-color: #e6e6e6;
+$catalog-border: #ebebeb;
+$footer-border-color: #d9d9d9;
+$special-grey: #666666;
+$extra-border: #cdcdcd;
 
 $base-bg: #68b738;
+$basic-green-2: #5EAA2F;
 $second-bg: #f2f2f2;
 $extra-bg: #eaeaea;
 
 $base-font: "Lato", "Arial", sans-serif;
 $second-font: "Oswald", "Arial", sans-serif;
 
-$desktop-width: 1440px;
+$desktop-width: 1260px;
 $tablet-width: 768px;
-$mobile-width: 320px;
+$mobile-width: 767px;
+$trans-default: 0.3s ease;

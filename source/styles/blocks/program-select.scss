@@ -1,7 +1,39 @@
+.program-select {
+  min-width: 320px;
+}
+
+.program-select__title {
+  margin-bottom: 35px;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+    padding: 38px 40px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+    padding: 50px 0 0;
+  }
+}
+
 .program-select__description {
+  margin-bottom: 16px;
+
+  font-family: $second-font;
   font-size: 14px;
   line-height: 18px;
-  font-family: $second-font;
   color: $second-color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 40px 43px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 45px;
+  }
 }

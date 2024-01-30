@@ -1,98 +1,104 @@
 .description {
-  padding-bottom: 49px;
+  padding-bottom: 51px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 46px;
+    padding: 25px 0 58px;
 
     border-bottom: 1px solid $nav-border-color;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 69px;
-
-    border-bottom: none;
+    border: none;
   }
 }
 
 .description__title {
-  margin: 0 0 40px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 50px;
   }
 }
 
 .description__list {
   display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 
   counter-reset: section;
 
-  gap: 20px;
-  grid-template-columns: 1fr;
-
   @media (min-width: $tablet-width) {
-    gap: 37px 208px;
     grid-template-columns: repeat(2, 1fr);
+    gap: 77px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 37px 70px;
     grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
   }
 }
 
 .description__item {
   position: relative;
 
-  display: grid;
   min-height: 60px;
+  padding: 4px 0 2px 80px;
 
-  gap: 20px;
-  grid-template-columns: 60px 1fr;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: $tablet-width) {
-    min-width: 250px;
-    min-height: 280px;
-    padding: 40px 0;
+    padding: 123px 75px 45px 0;
 
-    gap: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 
   &::before {
+    position: absolute;
     content: "";
+    top: 2px;
+    left: 0;
 
-    display: block;
     width: 60px;
     height: 60px;
 
     background-color: $base-bg;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60px 60px;
+    background-size: 28px;
 
     @media (min-width: $tablet-width) {
+      top: 12px;
+
       width: 80px;
       height: 80px;
-      margin-bottom: 31px;
     }
   }
 
   &::after {
-    content: counter(section) "";
     position: absolute;
-    top: 0;
-    left: 110px;
+    content: counter(section);
     z-index: -1;
+    top: 0;
+    left: 116px;
 
-    font-weight: 400;
-    font-size: 280px;
-    line-height: 280px;
+    margin: 0;
+
     font-family: $second-font;
+    font-size: 280px;
+    line-height: 230px;
     color: $second-bg;
 
     counter-increment: section;
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
   }
 
   &--natural {
