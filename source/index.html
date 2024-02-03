@@ -10,13 +10,15 @@
   <link rel="apple-touch-icon" href="favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" href="fonts/lato/lato-400.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/oswald/oswald-400.woff2" as="font" crossorigin>
 </head>
 
 <body class="body nojs">
   <header class="page-header page-header--index">
     <div class="page-header__container container">
       <div class="page-header__menu">
-        <a class="page-header_logo logo logo--header" href="index.html" aria-current="page">
+        <a class="page-header__logo logo logo--header" href="index.html" aria-current="page">
           <picture>
             <source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-cat-desktop.svg">
             <source width="60" height="50" media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-cat-tablet.svg">
@@ -24,7 +26,7 @@
             <img class="logo__image logo__image--icon" src="images/logo-cat-mobile.svg" width="33" height="38" alt="Логотип кэт энерджи.">
           </picture>
 
-          <svg class="logo__image logo__image--text" aria-hidden="true" focusable="false" width="101" height="18" alt="кэт энерджи.">
+          <svg class="logo__image logo__image--text" aria-hidden="true" focusable="false" width="101" height="18">
             <use href="images/icons/stack.svg#logo-text"></use>
           </svg>
 
@@ -180,7 +182,7 @@
         </noscript>
 
         <div class="contacts__iframe">
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abcc1360a71fbd05ba2eb451d7d21c4f8b199b2095defd389837428c1dfe30c08&amp;source=constructor" frameborder="0"></iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abcc1360a71fbd05ba2eb451d7d21c4f8b199b2095defd389837428c1dfe30c08&amp;source=constructor"></iframe>
         </div>
       </div>
 
@@ -191,7 +193,7 @@
   <footer class="page-footer">
     <div class="page-footer__container container">
       <a class="page-footer__logo logo logo--footer" href="index.html" aria-current="page">
-        <svg class="logo__image logo__image--text" aria-hidden="true" focusable="false" width="101" height="18" alt="кэт энерджи.">
+        <svg class="logo__image logo__image--text" aria-hidden="true" focusable="false" width="101" height="18">
           <use href="images/icons/stack.svg#logo-text"></use>
         </svg>
 

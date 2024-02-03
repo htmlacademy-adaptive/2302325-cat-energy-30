@@ -14,33 +14,36 @@
 
 .contacts__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   padding: 26px 0;
 
+  grid-template-columns: 1fr 1fr;
+
   @media (min-width: $tablet-width) {
-    gap: 10px 250px;
     padding: 60px 39px 60px;
+
+    gap: 10px 250px;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
     z-index: 1;
 
-    gap: 10px 90px;
     width: 565px;
     padding: 60px 80px 59px;
 
     background-color: #ffffff;
+
+    gap: 10px 90px;
   }
 }
 
 .contacts__title {
   margin: 0;
 
-  font-family: $second-font;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
+  font-family: $second-font;
   color: $second-color-light;
   text-transform: uppercase;
 
@@ -53,8 +56,8 @@
 .contacts__address {
   margin: 0;
 
-  font-size: 14px;
   font-style: normal;
+  font-size: 14px;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
@@ -84,6 +87,7 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
+
     inset: 0;
   }
 }

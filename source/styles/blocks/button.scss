@@ -2,21 +2,20 @@
   display: inline-block;
   padding: 10px;
 
-  font-family: $second-font;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
-  color: $contrast-color;
+  font-family: $second-font;
   text-align: center;
-  text-decoration: none;
+  color: $contrast-color;
   text-transform: uppercase;
+  text-decoration: none;
 
   background-color: $base-bg;
   border: none;
+  cursor: pointer;
 
   transition: background-color $trans-default;
-
-  cursor: pointer;
 
   &:hover,
   &:focus {

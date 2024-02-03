@@ -1,19 +1,21 @@
 .product__container {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 12px 0;
   align-items: start;
   padding: 20px 20px 25px;
 
   font-size: 12px;
   line-height: 16px;
 
+  gap: 12px 0;
+  grid-template-columns: 140px 1fr;
+
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr;
-    gap: 22px 0;
     padding: 40px 38px 40px;
 
     background-color: $second-bg;
+
+    gap: 22px 0;
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,10 +78,10 @@
   max-width: 80px;
   margin: 0;
 
-  font-family: $second-font;
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 20px;
+  font-family: $second-font;
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
@@ -99,22 +101,23 @@
   font-size: 12px;
   line-height: 16px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 13px 0 10px;
 
     font-size: 16px;
     line-height: 20px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 18px 0 23px;
   }
 }
 
 .product__features-item {
   display: flex;
-  gap: 10px;
   justify-content: space-between;
+
+  gap: 10px;
 
   @media (min-width: $tablet-width) {
     padding: 7px 0 4px;
@@ -151,8 +154,9 @@
 }
 
 .product__button {
-  grid-column: 1/-1;
   width: 100%;
+
+  grid-column: 1/-1;
 }
 
 .product--more .product__container {
@@ -176,16 +180,16 @@
 
   &::before,
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 38px;
     left: 50%;
-    transform: translateX(-50%);
 
     width: 30px;
     height: 2px;
 
     background-color: #d3d3d3;
+    transform: translateX(-50%);
 
     @media (min-width: $tablet-width) {
       top: 80px;
