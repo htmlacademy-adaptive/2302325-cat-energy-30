@@ -22,6 +22,10 @@
   background-position: top;
   background-size: auto, cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-mobile@2x.jpg");
+  }
+
   @media (max-width: $mobile-width) {
     margin: 0 -20px;
   }
